@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prospecta | Controle de Pragas Rápido, Seguro e Garantido</title>
+  <meta name="description" content="Prospecta — Controle de pragas urbanas para residências e empresas. Atendimento rápido, produtos certificados pela ANVISA e garantia por escrito. Solicite um orçamento agora!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonte oficial definida no ID Visual -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      /* === Cores oficiais Prospecta === */
+      --brand-500: rgb(144,192,45);   /* verde primário */
+      --brand-600: rgb(120,160,35);   /* verde escuro */
+      --brand-700: rgb(100,135,30);   /* verde hover */
+      --accent-500: rgb(20,44,110);   /* azul institucional */
+      --accent-600: rgb(15,35,95);
+      --neutral-light: rgb(245,245,245);
+      --neutral-dark: rgb(30,30,30);
+    }
+    html,body{font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans', sans-serif;}
+    .container-max { max-width: 1200px; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(2,6,23,.08); }
+
+    .btn-primary { background-color: var(--brand-500); color:#fff; font-weight:600; }
+    .btn-primary:hover { background-color: var(--brand-600); }
+    .btn-secondary { background-color: var(--accent-500); color:#fff; font-weight:500; }
+    .btn-secondary:hover { background-color: var(--accent-600); }
+  </style>
+</head>
+<body class="text-slate-800 bg-white">
+  <!-- Topbar -->
+  <div class="w-full bg-[var(--accent-500)] text-white text-sm">
+    <div class="mx-auto container-max px-4 flex items-center justify-between py-2">
+      <p class="opacity-90">Atendimento em até <strong>24h</strong> | Produtos certificados ANVISA</p>
+      <div class="flex gap-3">
+        <a href="#contato" class="underline hover:no-underline">Fale com especialista</a>
+        <a id="top-whats" href="#" class="inline-flex items-center gap-2 btn-secondary px-3 py-1.5 rounded-md"><span>WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo-prospecta.png" alt="Prospecta" class="h-10"/>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#servicos" class="hover:text-[var(--brand-500)]">Serviços</a>
+        <a href="#como-funciona" class="hover:text-[var(--brand-500)]">Como funciona</a>
+        <a href="#beneficios" class="hover:text-[var(--brand-500)]">Benefícios</a>
+        <a href="#faq" class="hover:text-[var(--brand-500)]">Dúvidas</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="hidden md:inline-flex btn-primary px-4 py-2 rounded-lg">Solicitar orçamento</a>
+        <button id="btn-menu" class="md:hidden p-2 rounded-lg border border-slate-200" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile" class="hidden md:hidden border-t border-slate-100 bg-white">
+      <div class="container-max mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a href="#servicos" class="py-2">Serviços</a>
+        <a href="#como-funciona" class="py-2">Como funciona</a>
+        <a href="#beneficios" class="py-2">Benefícios</a>
+        <a href="#faq" class="py-2">Dúvidas</a>
+        <a href="#contato" class="py-2 font-semibold text-[var(--brand-500)]">Solicitar orçamento</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-[var(--neutral-light)]">
+    <div class="mx-auto container-max px-4 grid md:grid-cols-2 gap-10 items-center py-14 md:py-20">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-[var(--neutral-dark)]">Controle de pragas <span class="text-[var(--brand-500)]">rápido, seguro</span> e com <span class="text-[var(--accent-500)]">garantia</span>.</h1>
+        <p class="mt-4 text-lg text-slate-600">Atendemos residências, condomínios e empresas. Técnicos certificados, produtos aprovados pela ANVISA e atendimento em até 24h.</p>
+        <div class="mt-8 flex gap-3">
+          <a href="#contato" class="inline-flex items-center btn-primary px-5 py-3 rounded-xl shadow-soft">Solicitar orçamento</a>
+          <a id="hero-whats" href="#" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 hover:bg-slate-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.12-1.3A10 10 0 1 0 12 2Zm5.5 13.2c-.23.64-1.12 1.15-1.83 1.3-.49.1-1.13.18-3.28-.68-2.75-1.14-4.52-3.95-4.66-4.13-.14-.18-1.11-1.47-1.11-2.8 0-1.32.69-1.96.94-2.23.24-.27.53-.34.71-.34h.5c.16 0 .38-.06.6.45.23.55.76 1.88.83 2.02.07.14.11.3.02.48-.08.18-.13.3-.27.46-.14.16-.29.36-.41.49-.13.14-.28.29-.12.57.16.27.71 1.18 1.52 1.9 1.05.93 1.92 1.22 2.2 1.36.27.14.43.12.59-.07.16-.18.68-.8.86-1.08.18-.27.36-.23.6-.14.25.09 1.58.75 1.85.89.27.14.45.2.52.31.08.1.08.6-.15 1.24Z"/></svg> WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-soft border border-slate-100">
+          <h2 class="text-xl font-bold">Peça um orçamento agora</h2>
+          <form id="lead-form" class="mt-4 grid gap-3">
+            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Nome" required>
+            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Telefone (WhatsApp)" required>
+            <select class="w-full rounded-lg border border-slate-300 px-3 py-2">
+              <option>Dedetização</option>
+              <option>Cupins</option>
+              <option>Ratos</option>
+              <option>Sanitização</option>
+            </select>
+            <button class="btn-secondary px-4 py-2 rounded-xl">Quero meu orçamento</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-[var(--accent-500)] text-white">
+    <div class="container-max mx-auto px-4 flex flex-col md:flex-row gap-6 items-center justify-between">
+      <div class="text-center md:text-left">
+        <p class="font-extrabold">Prospecta</p>
+        <p class="text-sm">Controle de pragas urbanas — Natal/RN</p>
+      </div>
+      <div class="text-sm">
+        © <span id="year"></span> Prospecta. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
