@@ -1,340 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prospecta | Controle de Pragas Rápido, Seguro e Garantido</title>
-  <meta name="description" content="Prospecta — Controle de pragas urbanas para residências e empresas. Atendimento rápido, produtos certificados pela ANVISA e garantia por escrito. Solicite um orçamento agora!" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prospecta - Controle de Pragas</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --brand-500: rgb(144,192,45);  /* Verde Prospecta */
-      --brand-600: rgb(120,160,35);
-      --brand-700: rgb(100,135,30);
-      --accent-500: rgb(20,44,110);  /* Azul Prospecta */
-      --accent-600: rgb(15,35,95);
-      --neutral-light: rgb(245,245,245);
-      --neutral-dark: rgb(30,30,30);
+      --brand-green: rgb(144,192,45);
+      --brand-blue: rgb(20,44,110);
     }
-    html,body{font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans', sans-serif;}
-    .container-max { max-width: 1200px; }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(2,6,23,.08); }
-    .btn-primary { background-color: var(--brand-500); color:#fff; font-weight:600; }
-    .btn-primary:hover { background-color: var(--brand-600); }
-    .btn-secondary { background-color: var(--accent-500); color:#fff; font-weight:500; }
-    .btn-secondary:hover { background-color: var(--accent-600); }
-    .icon { width:24px; height:24px; margin-right:10px; display:inline-block; flex: 0 0 auto; }
+    .bg-brand-green { background-color: var(--brand-green); }
+    .bg-brand-blue { background-color: var(--brand-blue); }
+    .text-brand-green { color: var(--brand-green); }
+    .text-brand-blue { color: var(--brand-blue); }
   </style>
 </head>
-<body class="text-slate-800 bg-white">
-  <!-- Topbar -->
-  <div class="w-full bg-[var(--accent-500)] text-white text-sm">
-    <div class="mx-auto container-max px-4 flex items-center justify-between py-2">
-      <p class="opacity-90">Atendimento em até <strong>24h</strong> | Produtos certificados ANVISA</p>
-      <div class="flex gap-3">
-        <a href="#contato" class="underline hover:no-underline">Fale com especialista</a>
-        <a id="top-whats" href="#" class="inline-flex items-center gap-2 btn-secondary px-3 py-1.5 rounded-md"><span>WhatsApp</span></a>
-      </div>
-    </div>
-  </div>
+<body class="font-sans antialiased text-slate-700">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
-    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="logo-prospecta.png" alt="Prospecta" class="h-10"/>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#servicos" class="hover:text-[var(--brand-500)]">Serviços</a>
-        <a href="#como-funciona" class="hover:text-[var(--brand-500)]">Como funciona</a>
-        <a href="#beneficios" class="hover:text-[var(--brand-500)]">Benefícios</a>
-        <a href="#faq" class="hover:text-[var(--brand-500)]">Dúvidas</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <a href="#contato" class="hidden md:inline-flex btn-primary px-4 py-2 rounded-lg">Solicitar orçamento</a>
-        <button id="btn-menu" class="md:hidden p-2 rounded-lg border border-slate-200" aria-label="Abrir menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobile" class="hidden md:hidden border-t border-slate-100 bg-white">
-      <div class="container-max mx-auto px-4 py-3 grid gap-3 text-sm">
-        <a href="#servicos" class="py-2">Serviços</a>
-        <a href="#como-funciona" class="py-2">Como funciona</a>
-        <a href="#beneficios" class="py-2">Benefícios</a>
-        <a href="#faq" class="py-2">Dúvidas</a>
-        <a href="#contato" class="py-2 font-semibold text-[var(--brand-500)]">Solicitar orçamento</a>
-      </div>
+  <!-- Hero -->
+  <header class="bg-brand-blue text-white">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">Controle de Pragas Profissional</h1>
+      <p class="mt-4 text-lg">Soluções seguras e eficazes para sua residência ou empresa</p>
+      <a href="#contato" class="mt-6 inline-block bg-brand-green text-white px-6 py-3 rounded-lg font-semibold">Solicite um Orçamento</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-[var(--neutral-light)]">
-    <div class="mx-auto container-max px-4 grid md:grid-cols-2 gap-10 items-center py-14 md:py-20">
-      <div>
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-[var(--neutral-dark)]">Controle de pragas <span class="text-[var(--brand-500)]">rápido, seguro</span> e com <span class="text-[var(--accent-500)]">garantia</span>.</h1>
-        <p class="mt-4 text-lg text-slate-600">Atendemos residências, condomínios e empresas. Técnicos certificados, produtos aprovados pela ANVISA e atendimento em até 24h.</p>
-        <div class="mt-8 flex gap-3">
-          <a href="#contato" class="inline-flex items-center btn-primary px-5 py-3 rounded-xl shadow-soft">Solicitar orçamento</a>
-          <a id="hero-whats" href="#" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 hover:bg-slate-50">WhatsApp</a>
-        </div>
-      </div>
-      <div>
-        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-soft border border-slate-100">
-          <h2 class="text-xl font-bold">Peça um orçamento agora</h2>
-          <form id="lead-form" class="mt-4 grid gap-3">
-            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Nome" required>
-            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Telefone (WhatsApp)" required>
-            <select class="w-full rounded-lg border border-slate-300 px-3 py-2">
-              <option>Dedetização</option>
-              <option>Cupins</option>
-              <option>Ratos</option>
-              <option>Sanitização</option>
-            </select>
-            <button class="btn-secondary px-4 py-2 rounded-xl">Quero meu orçamento</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Benefícios -->
-  <section id="beneficios" class="py-14 md:py-20 bg-[var(--neutral-light)]">
-    <div class="container-max mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-4xl font-extrabold">Por que escolher a <span class="text-[var(--brand-500)]">Prospecta</span>?</h2>
-      <div class="mt-10 grid md:grid-cols-4 sm:grid-cols-2 gap-6">
-        <div class="p-6 border rounded-2xl shadow-soft flex items-start justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
-          <div>
-            <p class="font-semibold">Atendimento em até 24h</p>
-            <p class="text-sm text-slate-600 mt-2">Agilidade para resolver o problema sem enrolação.</p>
-          </div>
+  <section id="beneficios" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-brand-blue">Benefícios</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-shield-halved text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold text-lg">Segurança</h3>
+          <p>Produtos aprovados pela Anvisa, seguros para pessoas e animais.</p>
         </div>
-        <div class="p-6 border rounded-2xl shadow-soft flex items-start justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          <div>
-            <p class="font-semibold">Produtos certificados</p>
-            <p class="text-sm text-slate-600 mt-2">Aprovados pela ANVISA, com aplicação responsável.</p>
-          </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-bolt text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold text-lg">Rapidez</h3>
+          <p>Atendimento ágil e eficiente, sem comprometer sua rotina.</p>
         </div>
-        <div class="p-6 border rounded-2xl shadow-soft flex items-start justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-          <div>
-            <p class="font-semibold">Garantia por escrito</p>
-            <p class="text-sm text-slate-600 mt-2">Retorno gratuito dentro do prazo se necessário.</p>
-          </div>
-        </div>
-        <div class="p-6 border rounded-2xl shadow-soft flex items-start justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.797.758 6.879 2.052M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          <div>
-            <p class="font-semibold">Equipe qualificada</p>
-            <p class="text-sm text-slate-600 mt-2">Técnicos treinados e equipamentos adequados.</p>
-          </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-leaf text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold text-lg">Sustentabilidade</h3>
+          <p>Metodologias que respeitam o meio ambiente.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="py-14 md:py-20 bg-slate-50">
-    <div class="container-max mx-auto px-4">
-      <div class="flex items-end justify-between flex-wrap gap-4">
-        <div>
-          <h2 class="text-2xl md:text-4xl font-extrabold">Serviços</h2>
-          <p class="text-slate-600 mt-2">Soluções para residências, comércios e indústrias.</p>
+  <section id="servicos" class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-brand-blue">Serviços</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-bug text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Dedetização</h3>
+          <p>Controle de insetos rasteiros como baratas e formigas.</p>
         </div>
-        <a href="#contato" class="inline-flex items-center gap-2 text-[var(--brand-500)] font-semibold">Pedir orçamento <span>→</span></a>
-      </div>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Dedetização (baratas e formigas)</h3>
-            <p class="text-sm text-slate-600 mt-2">Tratamento residual e gel de ação prolongada, seguro para ambientes com crianças e pets.</p>
-          </div>
-        </article>
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Cupins</h3>
-            <p class="text-sm text-slate-600 mt-2">Inspeção, barreira química e iscas com monitoramento.</p>
-          </div>
-        </article>
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Ratos e roedores</h3>
-            <p class="text-sm text-slate-600 mt-2">Controle integrado com iscas em pontos estratégicos e vedação preventiva.</p>
-          </div>
-        </article>
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v16M20 12H4"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Escorpiões e aranhas</h3>
-            <p class="text-sm text-slate-600 mt-2">Mapeamento de focos, aplicação dirigida e orientações de prevenção.</p>
-          </div>
-        </article>
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="10" width="14" height="8"/><path d="M7 10V7h10v3"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Sanitização</h3>
-            <p class="text-sm text-slate-600 mt-2">Nebulização para redução de carga microbiana em ambientes fechados.</p>
-          </div>
-        </article>
-        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-          <div>
-            <h3 class="font-bold text-lg">Plano empresarial</h3>
-            <p class="text-sm text-slate-600 mt-2">Contratos mensais para restaurantes, hotéis, clínicas e condomínios.</p>
-          </div>
-        </article>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-mosquito text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Desinsetização</h3>
+          <p>Controle de mosquitos, pernilongos e insetos voadores.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-otter text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Desratização</h3>
+          <p>Controle de roedores com técnicas modernas e seguras.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-spider text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Escorpiões e Aranhas</h3>
+          <p>Mapeamento de focos e aplicação dirigida com segurança.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-spray-can-sparkles text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Sanitização</h3>
+          <p>Nebulização para redução de carga microbiana em ambientes fechados.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-building text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">Plano Empresarial</h3>
+          <p>Contratos mensais para empresas, hotéis, clínicas e condomínios.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Como funciona -->
-  <section id="como-funciona" class="py-14 md:py-20">
-    <div class="container-max mx-auto px-4">
-      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Como funciona</h2>
-      <div class="mt-10 grid md:grid-cols-4 sm:grid-cols-2 gap-6">
-        <div class="p-6 border rounded-2xl flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6"/></svg>
-          <div>
-            <p class="font-semibold">Diagnóstico</p>
-            <p class="text-sm text-slate-600 mt-2">Identificação do tipo de praga e nível de infestação.</p>
-          </div>
+  <!-- Como Funciona -->
+  <section id="como-funciona" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-brand-blue">Como Funciona</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-phone text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">1. Contato</h3>
+          <p>Você solicita atendimento pelo site ou WhatsApp.</p>
         </div>
-        <div class="p-6 border rounded-2xl flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18"/></svg>
-          <div>
-            <p class="font-semibold">Plano de ação</p>
-            <p class="text-sm text-slate-600 mt-2">Definição da técnica e preparação do ambiente.</p>
-          </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-magnifying-glass text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">2. Avaliação</h3>
+          <p>Nossa equipe técnica visita o local e avalia a situação.</p>
         </div>
-        <div class="p-6 border rounded-2xl flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          <div>
-            <p class="font-semibold">Aplicação segura</p>
-            <p class="text-sm text-slate-600 mt-2">Execução por técnicos certificados.</p>
-          </div>
-        </div>
-        <div class="p-6 border rounded-2xl flex items-start">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon text-[var(--brand-500)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
-          <div>
-            <p class="font-semibold">Garantia e acompanhamento</p>
-            <p class="text-sm text-slate-600 mt-2">Revisita gratuita no prazo de garantia, se necessário.</p>
-          </div>
+        <div class="p-6 bg-white rounded-2xl shadow">
+          <i class="fa-solid fa-spray-can text-4xl text-brand-green"></i>
+          <h3 class="mt-4 font-bold">3. Aplicação</h3>
+          <p>Realizamos o tratamento e damos orientações de prevenção.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-14 md:py-20">
-    <div class="container-max mx-auto px-4">
-      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Dúvidas frequentes</h2>
-      <div class="mt-8 max-w-3xl mx-auto divide-y divide-slate-200 border border-slate-200 rounded-2xl">
-        <details class="group p-5">
-          <summary class="flex items-center justify-between cursor-pointer text-lg font-semibold">O produto tem cheiro?
-            <span class="transition group-open:rotate-180">⌄</span></summary>
-          <p class="mt-2 text-slate-600">Usamos produtos de baixo odor e aplicação focada. Recomendamos ventilar o ambiente por alguns minutos após o serviço.</p>
+  <section id="faq" class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-brand-blue">Dúvidas Frequentes</h2>
+      <div class="mt-10 space-y-6">
+        <details class="bg-white p-6 rounded-2xl shadow">
+          <summary class="font-semibold cursor-pointer">Os produtos são seguros?</summary>
+          <p class="mt-2 text-slate-600">Sim. Utilizamos apenas produtos aprovados pela Anvisa, seguros para pessoas e animais de estimação.</p>
         </details>
-        <details class="group p-5">
-          <summary class="flex items-center justify-between cursor-pointer text-lg font-semibold">É seguro para crianças e pets?
-            <span class="transition group-open:rotate-180">⌄</span></summary>
-          <p class="mt-2 text-slate-600">Sim, quando aplicado corretamente por técnicos e seguindo as orientações de preparo e retorno ao ambiente.</p>
+        <details class="bg-white p-6 rounded-2xl shadow">
+          <summary class="font-semibold cursor-pointer">Preciso sair de casa durante a aplicação?</summary>
+          <p class="mt-2 text-slate-600">Depende do tipo de aplicação. Nossa equipe sempre orienta antes do serviço.</p>
         </details>
-        <details class="group p-5">
-          <summary class="flex items-center justify-between cursor-pointer text-lg font-semibold">Qual a garantia?
-            <span class="transition group-open:rotate-180">⌄</span></summary>
-          <p class="mt-2 text-slate-600">Garantia por escrito conforme o tipo de praga e o ambiente tratado. Em caso de recorrência dentro do prazo, realizamos nova aplicação sem custo.</p>
-        </details>
-        <details class="group p-5">
-          <summary class="flex items-center justify-between cursor-pointer text-lg font-semibold">Atendem minha região?
-            <span class="transition group-open:rotate-180">⌄</span></summary>
-          <p class="mt-2 text-slate-600">Atendemos Natal e cidades vizinhas (consulte disponibilidade).</p>
+        <details class="bg-white p-6 rounded-2xl shadow">
+          <summary class="font-semibold cursor-pointer">Vocês atendem empresas?</summary>
+          <p class="mt-2 text-slate-600">Sim. Temos planos personalizados para empresas, hotéis, clínicas e condomínios.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- Contato -->
-  <section id="contato" class="py-14 md:py-20 bg-slate-50">
-    <div class="container-max mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="text-2xl md:text-4xl font-extrabold">Fale com a Prospecta</h2>
-          <p class="mt-3 text-slate-600">Horário: seg–sáb, 7h–19h | E-mail: <a class="underline" href="mailto:contato@prospecta.com.br">contato@prospecta.com.br</a></p>
-          <div class="mt-6 p-6 bg-white border border-slate-200 rounded-2xl">
-            <p class="font-semibold">Endereço (exemplo)</p>
-            <p class="text-slate-600">Av. Exemplo, 100 – Centro, Natal/RN</p>
-            <p class="mt-4 text-sm text-slate-500">Áreas atendidas: Natal, Parnamirim, Macaíba, Extremoz.</p>
-          </div>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
-          <h3 class="text-lg font-bold">Peça seu orçamento</h3>
-          <form id="contact-form" class="mt-4 grid gap-3">
-            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Nome" required>
-            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Telefone (WhatsApp)" required>
-            <input class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="E-mail">
-            <textarea rows="4" class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Descreva o problema"></textarea>
-            <button class="btn-primary px-4 py-2 rounded-xl">Enviar</button>
-            <p class="text-[11px] text-slate-500">Retorno em até 30 minutos dentro do horário comercial.</p>
-          </form>
-        </div>
-      </div>
-    </div>
+  <section id="contato" class="py-16 bg-brand-blue text-white text-center">
+    <h2 class="text-3xl font-bold">Fale Conosco</h2>
+    <p class="mt-2">Estamos prontos para atender você!</p>
+    <a href="https://wa.me/5584999999999" target="_blank" class="mt-6 inline-block bg-brand-green text-white px-6 py-3 rounded-lg font-semibold">Atendimento via WhatsApp</a>
   </section>
 
   <!-- Footer -->
-  <footer class="py-10 bg-[var(--accent-500)] text-white">
-    <div class="container-max mx-auto px-4 flex flex-col md:flex-row gap-6 items-center justify-between">
-      <div class="text-center md:text-left">
-        <p class="font-extrabold">Prospecta</p>
-        <p class="text-sm">Controle de pragas urbanas — Natal/RN</p>
-      </div>
-      <div class="text-sm">
-        © <span id="year"></span> Prospecta. Todos os direitos reservados.
-      </div>
-    </div>
+  <footer class="bg-brand-blue text-white py-8 text-center">
+    <p>&copy; 2025 Prospecta - Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    // Ano dinâmico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu
-    document.getElementById('btn-menu').addEventListener('click', ()=>{
-      document.getElementById('mobile').classList.toggle('hidden');
-    });
-
-    // WhatsApp CTAs: altere o número abaixo (DDI+DDD+número)
-    const WHATS = '5584999999999';
-    function buildWhatsLink(msg){
-      return `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
-    }
-    document.getElementById('top-whats').href  = buildWhatsLink('Olá! Preciso de orçamento para controle de pragas.');
-    document.getElementById('hero-whats').href = buildWhatsLink('Olá! Vim pelo site e quero falar com um especialista.');
-
-    // Form do herói -> redireciona para WhatsApp com resumo
-    document.getElementById('lead-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      const inputs = this.querySelectorAll('input, select');
-      const nome = inputs[0].value.trim();
-      const tel  = inputs[1].value.trim();
-      const serv = inputs[2].value;
-      const texto = `Olá! Sou ${nome}. Telefone: ${tel}. Serviço: ${serv}.`;
-      window.location.href = buildWhatsLink(texto);
-    });
-
-    // Form de contato (demonstração)
-    document.getElementById('contact-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Obrigado! Sua solicitação foi enviada. Entraremos em contato.');
-    });
-  </script>
 </body>
 </html>
